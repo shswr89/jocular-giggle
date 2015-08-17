@@ -1,0 +1,47 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+	ifstream infile;
+	
+	ofstream outfile;
+	
+	double invalue, weight, remain;
+	int dollars;
+	
+	infile.open("pennies.txt");
+	
+	outfile.open("penniestest.txt");
+	
+	infile>>invalue;
+	cout<<invalue<<endl;
+	weight=invalue/.12;
+	dollars=invalue/100;
+	remain= static_cast<int>(invalue) % 100;
+	outfile<<"There are "<<invalue<< " pennies in the bag, the equivalent of "<<dollars<<" dollars and "<<remain<<"pennies"<<endl;
+	infile.close();
+	return 0;
+	
+	
+	
+}
+/* Sample output, for input of 63.96
+There are 63.96 pennies in the bag, the equivalent of 0 dollars and 63pennies
+
+This is incorrect.
+The pennies problem was:
+An input file contains the weight of a bag of pennies, in ounces. 
+One penny weighs 0.12 ounces. The program is to calculate, and output to a file with appropriate labels 
+(1) the number of pennies in the bag, and 
+(2) the amount of money in dollars and cents. There are 100 pennies in 1 dollar.
+
+The input value is ounces, but you are reporting that invalue is the number of pennies in the bag, which is incorrect.
+You cannot get dollars by dividing ounces by 100. 
+The program runs, but you haven't provided the required outputs.
+
+Take enough time to figure out what's needed. A good idea is to take a numerical input, and do the calculations
+by hand. Then design the program steps, using appropriate variable names instead of values.
+
+70%
+*/
