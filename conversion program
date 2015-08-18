@@ -1,0 +1,30 @@
+//Code was pasted from a Word file - not submitted as a .cpp file - P.H.
+// From O. Omotade
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int gallons, quarts, pints;
+	string Fname;
+	cout<< " Please enter a family name" <<endl;//User enter Fname (family Name)
+	cin>> Fname;
+	cout<< " The Family you entered is " << Fname <<endl;
+	cout<< " Please enter total pint of bluberries " <<endl;
+	cin>> pints;// User enter total pint
+	cout<< " The total Bb is " << pints <<endl;
+	
+	quarts= pints / 2;// computer convert pint to quarts
+	
+	pints= pints%2;// computer Calculate Pints
+	
+	gallons= quarts / 4;// computer convert quarts to gallons
+	
+	quarts= quarts%4;// computer calculated quarts 
+	cout<< "The "<< Fname<< " Family picked " << gallons<< " gallon(s) " << quarts << " quart(s) " << pints << " Pint " <<endl;// print output
+	
+	//cin.get();
+	
+	//system("pause");
+	return 0;
+}
